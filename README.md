@@ -89,7 +89,17 @@ Pour exécuter la suite de tests unitaires et d'intégration (via Lab & Code) :
 npm test
 
 ```
+## 🔑 Utilisation du Token JWT
+Une fois connecté via la route /user/connect, vous recevrez un jeton (token). Pour accéder aux routes protégées :
 
+Copiez le token reçu.
+
+Dans votre client API (Postman, Insomnia, etc.), ajoutez un header Authorization.
+
+La valeur doit impérativement commencer par Bearer suivi d'un espace et de votre token.
+
+Exemple :
+Authorization: Bearer <votre_token_ici>
 ---
 
 ## 🛠️ Stack Technique
