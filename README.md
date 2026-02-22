@@ -78,7 +78,6 @@ Le worker doit être lancé dans un terminal séparé pour traiter les demandes 
 node rabmq.js
 
 ```
----
 
 ## Documentation API
 Swagger UI est disponible sur : http://localhost:3000/documentation
