@@ -102,6 +102,52 @@ Exemple :
 Authorization: Bearer <votre_token_ici>
 ---
 
+# API Documentation
+
+---
+
+## Authentification
+
+| Méthode | Endpoint | Description | Auth |
+| :--- | :--- | :--- | :--- |
+| **POST** | `/user` | Créer un utilisateur | ❌ |
+| **POST** | `/user/login` | Se connecter | ❌ |
+
+---
+
+## Utilisateurs
+
+| Méthode | Endpoint | Description | Auth | Scope |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/users` | Liste des utilisateurs | ✅ | user, admin |
+| **GET** | `/user/{id}` | Détails d'un utilisateur | ✅ | user, admin |
+| **PATCH** | `/user/{id}` | Modifier un utilisateur | ✅ | admin |
+| **DELETE** | `/user/{id}` | Supprimer un utilisateur | ✅ | admin |
+| **POST** | `/user/{id}/grant-admin` | Donner rôle admin | ✅ | admin |
+
+---
+
+## Films
+
+| Méthode | Endpoint | Description | Auth | Scope |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/movies` | Liste des films | ✅ | user, admin |
+| **GET** | `/movie/{id}` | Détails d'un film | ✅ | user, admin |
+| **POST** | `/movie` | Créer un film | ✅ | admin |
+| **PATCH** | `/movie/{id}` | Modifier un film | ✅ | admin |
+| **DELETE** | `/movie/{id}` | Supprimer un film | ✅ | admin |
+| **POST** | `/movies/export-csv` | Export CSV par email | ✅ | admin |
+
+---
+
+## Favoris
+
+| Méthode | Endpoint | Description | Auth | Scope |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/favorites` | Mes films favoris | ✅ | user, admin |
+| **POST** | `/movie/{id}/favorite` | Ajouter aux favoris | ✅ | user, admin |
+| **DELETE** | `/movie/{id}/favorite` | Retirer des favoris | ✅ | user, admin |
+
 ## 🛠️ Stack Technique
 
 * **Framework :** Hapi.js
