@@ -1,4 +1,4 @@
-# 🎬 Movie API R6
+# 🎬 Movie API R6A.05
 
 Ce projet est une API développée avec **Hapi.js**, utilisant **Objection.js** (ORM) et **RabbitMQ** pour la gestion asynchrone des exports de données par email.
 
